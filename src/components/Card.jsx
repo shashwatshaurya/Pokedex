@@ -11,6 +11,10 @@ class Card extends Component {
         console.log(this.props);
         if(this.props.isError)
             return ( <h3>Oops! Something went wrong.</h3> )
+        else if(this.props.pokemon==='')
+        {
+            return ( <div></div> );
+        }
         else
         {
             return (
