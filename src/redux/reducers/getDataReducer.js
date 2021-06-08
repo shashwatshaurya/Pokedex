@@ -14,11 +14,12 @@ const getDataReducer = (state=initialState, action) => {
     switch(action.type) {
         case actionTypes.getPokemonData:
             {
-                return state;
+                let st = {...state};
+                return st;
             }
         case actionTypes.fetchSucceeded:
             {
-                let st = state;
+                let st = {...state};
                 st.pkList = [...state.pkList, action.payload.pokeName];
                 st.pkName = action.payload.pokeName;
                 st.desc = action.payload.desc;
@@ -30,9 +31,9 @@ const getDataReducer = (state=initialState, action) => {
             }   
         case actionTypes.fetchFailed:
             {
-                let st = state;
-                st.error = true;
-                st.emsg = action.payload;
+                const st = {...state, error: true, emsg: action.payload};
+                //st.error = true;
+                //st.emsg = action.payload;
                 //console.log(st);
                 return st;
             }   
