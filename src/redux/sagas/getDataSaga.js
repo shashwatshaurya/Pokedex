@@ -29,20 +29,30 @@ function* getDataSaga(action) {
         const data = yield call([response, response.json]);
         const specUrl = data.species.url;
         const picUrl = data.sprites.front_default;
-        const type = data.types[0].type.name;
+        const type = data.types.map(arrElement => { return arrElement.type.name });
+        const stats = {
+            hp: data.stats[0].base_stat,
+            attack: data.stats[1].base_stat,
+            defence: data.stats[2].base_stat,
+            specialAttack: data.stats[3].base_stat,
+            specialDefence: data.stats[4].base_stat,
+            speed: data.stats[5].base_stat
+        };
+        const height = data.height;
+        const weight = data.weight;
+        const dexNum = data.id;
+        const abilities = data.abilities.map(arrElement => { return arrElement.ability.name });
         const specRes = yield call(fetch, specUrl);
         const specData = yield call([specRes, specRes.json]);
-        //console.log(specData);
-        //let descr = yield filterDesc();
-        //const desc = specData.flavor_text_entries[1].flavor_text;
+        const catchRate = specData.capture_rate;
+        const femaleRate = specData.gender_rate;
+        //const color = specData.color.name;
+        const hatchSteps = specData.hatch_counter;
+        const eggGroups = specData.egg_groups.map(e => { return e.name });
+        const habitat = specData.habitat.name;
         const desc = yield call(filterDesc,specData.flavor_text_entries);
-        //console.log(desc);
-        /* const picRes = yield call(fetch, figUrl);
-        console.log(picRes);
-        const pic = yield call([picRes, picRes.base64]);
-        console.log(pic+'hi'); */
-        const payload = {pokeName, type, desc, picUrl};
-        console.log(payload);
+        const payload = {pokeName, type, desc, picUrl, stats, height, weight, dexNum, abilities, catchRate, femaleRate, hatchSteps, eggGroups, habitat};
+        //console.log(payload);
         yield put(actions.success(payload));
     } catch (e) {
         yield put(actions.failed(e));

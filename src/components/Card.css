@@ -1,0 +1,196 @@
+.progressBar {
+    height: 17px;
+    width: 94%;
+    padding:0;
+    margin-top: 3px; 
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(228, 228, 228);
+}
+
+.progressDone {
+    text-align: center;
+    color: #f0f0f0;
+    font-size: 1em;
+    font-weight: 500;
+    height: 17px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.cardContent {
+    border-radius: 4px;
+}
+
+.genInfo {
+    height: 45px;
+    background-color: rgba(236, 236, 236);
+    border-bottom: 1px solid rgb(202, 202, 202, 0.719);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.pokeId {
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.types {
+    display: flex;
+    color:rgb(238, 238, 238)
+}
+
+.type {
+    border-radius: 9px;
+    padding: 1px 7px;
+}
+
+.statInfo {
+    padding: 30px 10px 30px 10px;
+    display: grid;
+    grid-template-columns: 27% 23% 50%;
+}
+
+.col-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokemonImage {
+    width: 190px;
+    height: 190px;
+}
+
+.pokemonName {
+    font-size: 1.4em;
+    font-weight: bolder;
+    padding-bottom: 7px;
+}
+
+.statItem {
+    padding: 2px;
+}
+
+.empty {
+    height: 2.07em;
+}
+
+.description {
+    font-weight: 500;
+    padding-left: 25px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(202, 202, 202, 0.3);
+    box-shadow: 0 1px 0 0 rgba(202, 202, 202, 0.15);
+}
+
+.profileInfo {
+    text-align: center;
+    padding: 10px;
+}
+
+.profile {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.17em;
+}
+
+.profileItems {
+    text-align: left;
+    margin-left: 19%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.leftProfileItems, .rightProfileItems {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.dataFrom {
+    height: 45px;
+    background-color: rgba(236, 236, 236);
+    border-top: 1px solid rgb(202, 202, 202, 0.719);
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    padding-left: 6px;
+    text-decoration: none;
+}
+
+.bug {
+    background-color: #A8B820;
+}
+
+.dark {
+    background-color: #705848;
+}
+
+.dragon {
+    background-color: #7038F8;
+}
+
+.electric {
+    background-color: #F8D030;
+}
+
+.fairy {
+    background-color: #EE99AC;
+}
+
+.fighting {
+    background-color: #C03028;
+}
+
+.fire {
+    background-color: #F08030;
+}
+
+.flying {
+    background-color: #A890F0;
+}
+
+.ice {
+    background-color: #98D8D8;
+}
+
+.normal {
+    background-color: #A8A878;
+}
+
+.poison {
+    background-color: #A040A0;
+}
+
+.psychic {
+    background-color: #F85888;
+}
+
+.grass {
+    background-color: #78C850;
+}
+
+.ghost {
+    background-color: #705898;
+}
+
+.ground {
+    background-color: #E0C068;
+}
+
+.rock {
+    background-color: #B8A038;
+}
+
+.steel {
+    background-color: #B8B8D0;
+}
+
+.water {
+    background-color: #6890F0;
+}

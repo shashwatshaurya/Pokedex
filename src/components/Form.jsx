@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 //import store from '../redux/store';
 import actions from '../redux/actions/actionCreators';
 import { connect } from 'react-redux';
+import './Form.css';
 
 class Form extends Component{
     constructor(props){
